@@ -1,0 +1,22 @@
+CREATE TABLE `users` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `login` varchar(40) NOT NULL,
+    `email` varchar(40) NOT NULL,
+    `password` varchar(60) NOT NULL,
+    `first_name` varchar(60) NOT NULL,
+    `last_name` varchar(60) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `news` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `user_id` INT NOT NULL,
+    `title` varchar(200) NOT NULL,
+    `text` TEXT NOT NULL,
+    `date` DATE NOT NULL,
+    PRIMARY KEY (`id`)
+);
+
+ALTER TABLE `news` ADD CONSTRAINT `news_fk0` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`);
+
+
