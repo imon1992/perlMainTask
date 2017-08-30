@@ -15,12 +15,12 @@ sub new
 
 sub indexController
 {
-    #print "Content-type: text/html; charset=utf-8\n\n";
-    #my $x = Model::NewsModel->new();
-    #my $res = $x->selectNews();
-    #print Dumper($res);
-    my $index = View::Main->new();
-    $index->printMain();
+    print "Content-type: text/html; charset=utf-8\n\n";
+    my $x = Model::NewsModel->new();
+    my $res = $x->selectNews();
+    print Dumper($res);
+    #my $index = View::Main->new();
+    #$index->printMain();
     
     # print "Content-type: text/html; charset=utf-8\n\n";
     # my $fileReader = Utils::File->new();
