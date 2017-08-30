@@ -1,7 +1,12 @@
-package Controller::LoginController;
+package Model::UserModel;
 
 use strict;
 use warnings;
+
+sub createUser;
+sub updateUser;
+sub selectUser;
+
 
 sub new
 {
@@ -10,11 +15,17 @@ sub new
     return bless $self,$class;
 }
 
-sub loginController
+sub createUser 
 {
-    print "Content-type: text/html; charset=utf-8\n\n";
-	print 'login';
 }
 
+sub updateUser
+{
+}
+
+sub selectUser
+{
+}
 
 1;
+

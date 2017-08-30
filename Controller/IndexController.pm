@@ -4,6 +4,8 @@ use strict;
 use warnings;
 
 use View::Main;
+use Model::NewsModel;
+use Data::Dumper;
 sub new
 {
     my $class = ref($_[0])||$_[0];
@@ -13,6 +15,10 @@ sub new
 
 sub indexController
 {
+    #print "Content-type: text/html; charset=utf-8\n\n";
+    #my $x = Model::NewsModel->new();
+    #my $res = $x->selectNews();
+    #print Dumper($res);
     my $index = View::Main->new();
     $index->printMain();
     
