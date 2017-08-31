@@ -33,25 +33,19 @@ sub updateNews
 
 sub selectNews
 {
-        my ($self) = @_;
-    my %lengs = ();
-    my %a;
+    my ($self) = @_;
+    my %news = ();
+
     my $dbh = $self->dbConnect();
     my $sth =  $dbh->prepare('SELECT * FROM news');
     my $result = $sth->execute();
-   #print $result;
     my $i =0;  
-    while (my @row = $sth->fetchrow_array)
+    while (my $row = $sth->fetchrow_hashref)
     {
-      print @row;
-
-        $lengs{$i} = $a{a} =( @row[1],$row[3]) ;
-
-        #print $lengs;
-        #$lengs= $row[2];
+        $news{$i} = \$row;
         $i++;
     }
-    return \%lengs;
+    return \%news;
 }
 
 sub deleteNews

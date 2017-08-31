@@ -1,4 +1,5 @@
-#!/usr/bin/perl
+#!C:\Dwimperl\perl\bin\perl.exe -w
+
 use strict;
 use warnings;
 use Data::Dumper;
