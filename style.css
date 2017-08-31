@@ -1,0 +1,27 @@
+.block
+{
+	display: inline-block;
+}
+
+
+
+.news p
+{
+text-align: center;
+}
+
+.author
+{
+text-align: right;	
+}
+
+.left
+{
+    display: inline-block;
+    width: 50%;	
+}	
+
+.right
+{
+	display: inline-block;
+}

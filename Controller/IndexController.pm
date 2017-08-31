@@ -3,8 +3,11 @@ package Controller::IndexController;
 use strict;
 use warnings;
 
-use View::Main;
+use View::RenderNews;
 use Model::NewsModel;
+use Libs::FileReader;
+use Libs::MakeHash;
+use Libs::PlaceholderReplace;
 use Data::Dumper;
 sub new
 {
@@ -18,9 +21,21 @@ sub indexController
     print "Content-type: text/html; charset=utf-8\n\n";
     my $x = Model::NewsModel->new();
     my $res = $x->selectNews();
-    print Dumper($res->{1});
-    #my $index = View::Main->new();
-    #$index->printMain();
+    
+    # print Dumper($res->{1});
+    my $index = View::RenderNews->new();
+    my $allNews = $index->renderNews($res);
+    
+    my $fileReader = Libs::FileReader->new();
+    my $register = $fileReader->readFile('registerLogin.html');
+    my $replaceFile = $fileReader->readFile('main.html');
+    
+    my $hashMake = Libs::MakeHash->new();
+    my $hash = $hashMake->makeHash($register,$allNews,'');
+    
+    my $placeholderReplace = Libs::PlaceholderReplace->new();
+    my $html = $placeholderReplace->replacer($replaceFile,$hash);
+    print $html;
     
     # print "Content-type: text/html; charset=utf-8\n\n";
     # my $fileReader = Utils::File->new();
