@@ -17,19 +17,19 @@ use lib('Libs');
 
 
 use Rout::Rout;
-use Libs::Validators;
-# use vars qw(%in);
+#use Libs::Validators;
+ use vars qw(%in);
 
 
 
-# $|=1;
-# ReadParse();
+ $|=1;
+ ReadParse();
 
 
 my $rout = Rout::Rout->new();
 $rout->rout();
 
-# print '<pre>' . Dumper(\%in).'<pre>';
+ print '<pre>' . Dumper(\%in).'<pre>';
 # print '<pre>' . Dumper($in{login}).'<pre>';
 
  # print '<pre>' . Dumper(\%ENV).'<pre>';

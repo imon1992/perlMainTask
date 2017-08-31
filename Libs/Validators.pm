@@ -15,13 +15,13 @@ sub new
 sub notEmpty
 {
     my ($self,$query) = @_;
-    if(length($query) > 4)
+    if(length($query) > 1)
     {
         return 1;
     }
     else
     {
-        print "check less 4 char";
+        return 0;
     }
 }
 

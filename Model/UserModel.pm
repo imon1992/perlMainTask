@@ -26,10 +26,10 @@ sub _dbConnect
 sub createUser 
 {
     my ($self,$login,$pass,$email,$fName,$lName) = @_;
-    my %news = ();
     my $dbh = $self->_dbConnect();
-    my $sth =  $dbh->prepare("INSERT INTO users(login,password,email,first_name,last_name) VALUES($login,$pass=md5($pass),$email,$fName,$lName)");
-    my $result = $sth->execute();
+    my $ctx = Digest::MD5->new;
+    my $sth =  $dbh->prepare("INSERT INTO users(login,password,email,first_name,last_name) VALUES(?,?,?,?,?)");
+    my $result = $sth->execute($login,md5($pass),$email,$fName,$lName);
 }
 
 sub updateUser
@@ -49,8 +49,8 @@ sub selectUser
 {
     my($self,$login,$pass) = @_;
     my $dbh = $self->_dbConnect();
-    my $sth = $dbh->prepare("select * from users WHERE login = $login AND password = $pass");
-    $sth->execute();
+    my $sth = $dbh->prepare("select * from users WHERE login = ? AND password = ?");
+    $sth->execute($login,md5($pass));
     if ($sth->rows)
     {
         return 1;

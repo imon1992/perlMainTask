@@ -84,8 +84,9 @@ sub rout
         $in{login}  = '';
         $in{password} ='';
     }
+    
 
-    if($in{loginRegister} && $in{passwordRegister} && $in{emailRegister} && $in{firstNameRegister} && $in{lastNameRegister})
+if($in{loginRegister} && $in{passwordRegister} && $in{emailRegister} && $in{firstNameRegister} && $in{lastNameRegister})
     {
         my $register = Controller::RegisterController->new();
         $register->registerController($in{loginRegister}, $in{passwordRegister},$in{emailRegister},$in{firstNameRegister},$in{lastNameRegister});        
