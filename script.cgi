@@ -18,12 +18,12 @@ use lib('Libs');
 
 use Rout::Rout;
 #use Libs::Validators;
- use vars qw(%in);
+# use vars qw(%in);
 
 
 
- $|=1;
- ReadParse();
+# $|=1;
+# ReadParse();
 
 
 my $rout = Rout::Rout->new();

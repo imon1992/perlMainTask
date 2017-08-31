@@ -27,19 +27,14 @@ sub notEmpty
 
 sub checkEmail
 {
-    my ($self,$query) = @_;
-    my @addresses = Email::Address->parse($query);
-    if(@addresses)
+    my ($self, $email) = @_;
+    my $reg ='/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/';
+    if ($email =~ /$reg/i)
     {
-        print 'valid';
-        return 1;
+        return 1;            
     }
-    else
-    {
-        print 'no valid';
-    }
+    return 0;
 }
-
 #sub countChar
 #{
    # my ($self,$query) = @_;

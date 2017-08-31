@@ -3,6 +3,14 @@ package Controller::ProfileController;
 use strict;
 use warnings;
 
+  use View::RenderNews;
+  use View::Main;
+  use Model::NewsModel;
+ use Libs::FileReader;
+  use Libs::MakeHash;
+  use Libs::PlaceholderReplace;
+  use Data::Dumper;
+
 sub new
 {
     my $class = ref($_[0])||$_[0];
@@ -12,8 +20,29 @@ sub new
 
 sub profileController
 {
-    print "Content-type: text/html; charset=utf-8\n\n";
-	print 'profile';
+
+     my $x = Model::NewsModel->new();
+     my $res = $x->selectNews();
+
+    # print Dumper($res->{1});
+     my $index = View::RenderNews->new();
+     my $allNews = $index->renderNews($res);
+
+    my $fileReader = Libs::FileReader->new();
+    my $register = $fileReader->readFile('html/logout.html');
+   my $replaceFile = $fileReader->readFile('html/main.html');
+
+    my $hashMake = Libs::MakeHash->new();
+   my $hash = $hashMake->makeHash($register,$allNews,'portfolio');
+
+  my $placeholderReplace = Libs::PlaceholderReplace->new();
+ my $html = $placeholderReplace->replacer($replaceFile,$hash);
+
+ my $view = View::Main->new();
+      $view->printMain($html);
+
+#    print "Content-type: text/html; charset=utf-8\n\n";
+#	print 'profile';
 }
 
 

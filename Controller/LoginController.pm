@@ -26,26 +26,30 @@ sub loginController
     my $p = $x->selectUser($login,$pass);
     print $p; 
 if($p)
-    {
-     my $x = Model::NewsModel->new();
-     my $res = $x->selectNews();
+{    
+       my $url="script.cgi?profile";
+   my $t=0; # time until redirect activates
+   print "<META HTTP-EQUIV=refresh CONTENT=\"$t;URL=$url\">\n";
+
+#     my $x = Model::NewsModel->new();
+#     my $res = $x->selectNews();
 
      # print Dumper($res->{1});
-     my $index = View::RenderNews->new();
-     my $allNews = $index->renderNews($res);
+#     my $index = View::RenderNews->new();
+#3     my $allNews = $index->renderNews($res);
 
-     my $fileReader = Libs::FileReader->new();
-     my $register = $fileReader->readFile('html/logout.html');
-     my $replaceFile = $fileReader->readFile('html/main.html');
+ #    my $fileReader = Libs::FileReader->new();
+ #    my $register = $fileReader->readFile('html/logout.html');
+  #   my $replaceFile = $fileReader->readFile('html/main.html');
+#
+ #    my $hashMake = Libs::MakeHash->new();
+  #   my $hash = $hashMake->makeHash($register,$allNews,'portfolio');
 
-     my $hashMake = Libs::MakeHash->new();
-     my $hash = $hashMake->makeHash($register,$allNews,'portfolio');
+   #  my $placeholderReplace = Libs::PlaceholderReplace->new();
+    # my $html = $placeholderReplace->replacer($replaceFile,$hash);
 
-     my $placeholderReplace = Libs::PlaceholderReplace->new();
-     my $html = $placeholderReplace->replacer($replaceFile,$hash);
-
-     my $view = View::Main->new();
-     $view->printMain($html);
+    # my $view = View::Main->new();
+    # $view->printMain($html);
     }
 
 
