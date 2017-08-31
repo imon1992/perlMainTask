@@ -12,6 +12,9 @@ sub new
 
 sub loginController
 {
+	my($self,$login,$pass) = @_;
+	
+	#validate data
     print "Content-type: text/html; charset=utf-8\n\n";
 	print 'login';
 }

@@ -1,9 +1,12 @@
-.block
+.blockInline
 {
 	display: inline-block;
 }
 
-
+.block
+{
+	display: block;
+}
 
 .news p
 {
