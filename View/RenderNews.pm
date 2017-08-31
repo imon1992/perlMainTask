@@ -15,28 +15,6 @@ sub renderNews{
 # print "Content-type: text/html; charset=utf-8\n\n";
 my $html ='';
 
-# my @d1 = ('10.04.15','some text','some author');
-# # print @d1;
-# my @d2 = ('10.04.15','some text','some else author');
-# # my@d5 = ('10.0add15','somdsadat','sosdadasauthor');
-# my %d3 =(1=>\@d1,2=>\@d2);
-# print Dumper($allNews->{1}{date});
-# @d1
-# my $html = 
-# '
-# <!DOCTYPE HTML>
-# <html>
- # <head>
-  # <meta charset="utf-8">
-  # <title>Стили</title>
-  # <link rel="stylesheet" href="style.css">
- # </head>
-# <html>
-# <body>
-
-
-# LANG_register
-
 # ';
 foreach my $key(keys $allNews)
 {

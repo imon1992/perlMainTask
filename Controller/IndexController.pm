@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use View::RenderNews;
+use View::Main;
 use Model::NewsModel;
 use Libs::FileReader;
 use Libs::MakeHash;
@@ -18,7 +19,7 @@ sub new
 
 sub indexController
 {
-    print "Content-type: text/html; charset=utf-8\n\n";
+    # print "Content-type: text/html; charset=utf-8\n\n";
     my $x = Model::NewsModel->new();
     my $res = $x->selectNews();
     
@@ -27,16 +28,24 @@ sub indexController
     my $allNews = $index->renderNews($res);
     
     my $fileReader = Libs::FileReader->new();
-    my $register = $fileReader->readFile('registerLogin.html');
-    my $replaceFile = $fileReader->readFile('main.html');
+    my $register = $fileReader->readFile('html/registerLogin.html');
+    my $replaceFile = $fileReader->readFile('html/main.html');
     
     my $hashMake = Libs::MakeHash->new();
     my $hash = $hashMake->makeHash($register,$allNews,'');
     
     my $placeholderReplace = Libs::PlaceholderReplace->new();
     my $html = $placeholderReplace->replacer($replaceFile,$hash);
+<<<<<<< HEAD
     print $html;
 
+=======
+    
+    my $view = View::Main->new();
+    $view->printMain($html);
+    # print $html;
+    
+>>>>>>> 7e25be841aaa9b700e2e21861f447dc517298509
     # print "Content-type: text/html; charset=utf-8\n\n";
     # my $fileReader = Utils::File->new();
 # my $file = $fileReader->readFile('registerLogin.html');

@@ -16,7 +16,7 @@ sub new
     return bless $self,$class;
 }
 
-sub dbConnect
+sub _dbConnect
 {
   #  DBI:mysql:database=DATABASENAME;host=HOSTNAME
   # my $dbh = DBI->connect('DBI:mysql:database=user14;host=localhost','user14','tuser14');
@@ -37,7 +37,7 @@ sub selectNews
     my ($self) = @_;
     my %news = ();
 
-    my $dbh = $self->dbConnect();
+    my $dbh = $self->_dbConnect();
     my $sth =  $dbh->prepare('select users.login, news.* from news
 join users on news.user_id = users.id');
     my $result = $sth->execute();
