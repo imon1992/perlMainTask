@@ -36,16 +36,10 @@ sub indexController
     
     my $placeholderReplace = Libs::PlaceholderReplace->new();
     my $html = $placeholderReplace->replacer($replaceFile,$hash);
-<<<<<<< HEAD
-    print $html;
-
-=======
     
     my $view = View::Main->new();
     $view->printMain($html);
     # print $html;
-    
->>>>>>> 7e25be841aaa9b700e2e21861f447dc517298509
     # print "Content-type: text/html; charset=utf-8\n\n";
     # my $fileReader = Utils::File->new();
 # my $file = $fileReader->readFile('registerLogin.html');
