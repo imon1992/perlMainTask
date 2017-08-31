@@ -32,9 +32,9 @@ sub createNews
     my $date = localtime;
     my $dbh = $self->_dbConnect();
     my $sth = $dbh->prepare("insert into news (title, text, date, user_id)
-                                values ($title, $text, $date,  $user_id");
+                                values (?,?,?,?");
 
-    if ($sth->execute())
+    if ($sth->execute($title,$text,$date,$user_id))
     {
         $sth->finish();
         return "Create news";
@@ -47,9 +47,9 @@ sub updateNews
     my($self, $id, $title, $text,) = @_;
     my $date = localtime;
     my $dbh = $self->_dbConnect();
-    my $sth = $dbh->prepare("update news set title = $title, text = $text, date = $date,
-                where id = $id");
-    if ($sth->execute())
+    my $sth = $dbh->prepare("update news set title = ?, text = ?, date = ?,
+                where id = ?");
+    if ($sth->execute($title,$text,$date,$id))
     {
         $sth->finish();
         return "News update";
@@ -79,8 +79,8 @@ sub deleteNews
 {
     my($self, $id) = @_;
     my $dbh = $self->_dbConnect();
-    my $sth = $dbh->prepare("delete from news where id = $id");
-    if ($sth->execute())
+    my $sth = $dbh->prepare("delete from news where id = ?");
+    if ($sth->execute($id))
     {
         $sth->finish();
         return "News delete";

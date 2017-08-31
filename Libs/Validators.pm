@@ -26,9 +26,9 @@ sub notEmpty
 
 sub checkEmail
 {
-    my ($self, $email) = @_;
+    my ($self, $mail) = @_;
     my $reg ='/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/';
-    if ($email =~ /$reg/i)
+    if ($mail =~ /$reg/i)
     {
         return 1;            
     }
