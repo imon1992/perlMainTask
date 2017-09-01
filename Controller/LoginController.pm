@@ -25,6 +25,8 @@ sub loginController
 	my($self,$login,$pass) = @_;
 	my $x = Model::UserModel->new();
     my $p = $x->selectUser($login,$pass);
+    print Dumper $p;
+
 if($p)
 {
 #    my $x = Libs::sessionUtil->new();
@@ -33,7 +35,7 @@ if($p)
 #    my $v = $x->get('userId');
 
 #    print Dumper($v);
-       my $url="script.cgi?profile";
+       my $url="script.cgi?profile=1&userid=$p";
    my $t=0; # time until redirect activates
    print "<META HTTP-EQUIV=refresh CONTENT=\"$t;URL=$url\">\n";
 

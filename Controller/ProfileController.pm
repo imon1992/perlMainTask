@@ -25,12 +25,14 @@ sub profileController
 {
 #my $x = Libs::sessionUtil->new();
 
+    my ($self,$userId) = @_;
+    
      my $x = Model::NewsModel->new();
      my $allNews = $x->selectNews();
-    my $userNews = $x->selectNewsByUserId(1);
+    my $userNews = $x->selectNewsByUserId($userId);
 
     my $user = Model::UserModel->new();
-    my $userInfo = $user->selectAllUserInfo(1);
+    my $userInfo = $user->selectAllUserInfo($userId);
 
      my $index = View::RenderNews->new();
      my $allNews = $index->renderNews($allNews);

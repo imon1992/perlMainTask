@@ -14,7 +14,7 @@
      my($self,$userInfo,$userNews) = @_;
 
 
- my $profileInfo='<p><a href="script?cgi?addNews=1">Add news</a></p>';
+ my $profileInfo='<p><a href="script.cgi?addNews=1&userid='.$userInfo->{0}->{id}.'">Add news</a></p>';
 
  foreach my $key(keys $userInfo)
  {

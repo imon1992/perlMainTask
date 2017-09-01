@@ -47,16 +47,16 @@ sub rout
         $register->registerController();
     }
 
-    if($query eq 'profile')
+    if($in{profile} eq '1')
     {
         my $profile = Controller::ProfileController->new();
-        $profile->profileController();
+        $profile->profileController($in{userid});
     }
 
-    if($query eq 'addNews')
+    if($in{addNews} eq '1')
     {
         my $addNews = Controller::AddNewsController->new();
-        $addNews->addNewsController();
+        $addNews->addNewsController('','',$in{userid});
     }
 
 
@@ -84,6 +84,12 @@ sub rout
         $in{password} ='';
     }
 
+        if($in{titleAdd} && $in{newsTextAdd})
+    {
+                my $addNews = Controller::AddNewsController->new();
+        $addNews->addNewsController($in{titleAdd}, $in{newsTextAdd},$in{userid});
+    }
+    
     if($in{titleChange} && $in{textChange})
     {
                 my $changeNews = Controller::ChangeNewsController->new();

@@ -3,7 +3,6 @@ package Model::UserModel;
 use strict;
 use warnings;
 use Digest::MD5 qw(md5 md5_hex md5_base64);
-
 sub createUser;
 sub updateUser;
 sub selectUser;
@@ -49,14 +48,16 @@ sub updateUser
 sub selectUser
 {
     my($self,$login,$pass) = @_;
+    my $userId;
     my $dbh = $self->_dbConnect();
-    my $sth = $dbh->prepare("select * from users WHERE login = ? AND password = ?");
-    $sth->execute($login,md5($pass));
-    if ($sth->rows)
-    {
-        return 1;
-    }
-
+    my $sth = $dbh->prepare("select id from users where login = ? and password = ? ");
+    my $x = $sth->execute($login,md5($pass));
+while (my $row = $sth->fetchrow_hashref)
+       {
+           $userId = $row->{id};
+       }
+    
+return $userId;
 }
 
 sub selectAllUserInfo

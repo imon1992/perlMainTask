@@ -32,7 +32,7 @@ sub _dbConnect
       my $date = localtime;
       my $dbh = $self->_dbConnect();
       my $sth = $dbh->prepare("insert into news (title, text, date, user_id)
-                                values (?,?,?,?");
+                                values (?,?,?,?)");
 
     if ($sth->execute($title,$text,$date,$user_id))
       {
