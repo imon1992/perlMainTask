@@ -20,11 +20,13 @@ text-align: right;
 
 .left
 {
+    float: left;
     display: inline-block;
-    width: 50%;	
-}	
+    width: 50%;
+}
 
 .right
 {
 	display: inline-block;
+    /*float: right;*/
 }

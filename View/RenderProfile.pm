@@ -11,44 +11,33 @@
  }
 
  sub renderUserInfo{
-
      my($self,$userInfo,$userNews) = @_;
 
- my $profileInfo='';
- my $userNewsInfo = '';
+
+ my $profileInfo='<p><a href="script?cgi?addNews=1">Add news</a></p>';
+
  foreach my $key(keys $userInfo)
  {
+
      $profileInfo .=
-                 '<p>'.$userInfo->{$key}->{email} . '</p>'.
-                '<p>'. $userInfo->{$key}->{first_name}.'</p>'.
-                '<p>'.$userInfo->{$key}->{last_name}.'<p>'.
-                '<p><a href="script.cgi?changeProfile&id='.$userInfo->{$key}->{id}.'"> Change Info </a>';
+                  '<p> Email: '.$userInfo->{$key}->{email} . '</p>'.
+                '<p>First Name: '. $userInfo->{$key}->{first_name}.'</p>'.
+                '<p>Last Name: '.$userInfo->{$key}->{last_name}.'<p>'.
+                '<p><a href="script.cgi?changeProfile=1&userid='.$userInfo->{$key}->{id}.'"> Change Info </a>';
 
  }
 
 foreach my $key(keys $userNews)
 {
-# print $key1;
-     # print Dumper($allNews->{$key}{'title'});
+
   $profileInfo.= ' <div >'.$userNews->{$key}->{date} .'</div>
                                <div class="news"> <p>'.$userNews->{$key}->{title} .'</p>'.
                                    '<p>'.$userNews->{$key}->{text} .'</p>
                                </div>
-                               <a href="script.cgi?changeNews?id='.$userNews->{$key}->{id}.'"> change New</a>
+                               <a href="script.cgi?changeNews=1&newsid='.$userNews->{$key}->{id}.'"> change New</a>
                            </div>';
-#    my $a = $d3{$key};
-    # # print  $a->[0];
-    # $html .= "<div> <p> $a->[0] </p>
-                    # <p> $a->[1] </p>
-                    # <p> $a->[2] </p>
-              # </div>";
+
 }
-
-#my %profile =();
-#$profile{LANG_profile} = $profileInfo;
-#$profile{LANG_userNews} = $userNewsInfo;
-
-#print Dumper(%profile);
 
 return $profileInfo;
 }

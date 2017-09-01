@@ -29,12 +29,12 @@ sub new
 
 sub rout
 {
-    
-    
+
+
     my $query = $ENV{QUERY_STRING};
     $|=1;
     ReadParse();
-    
+
     if($query eq '')
     {
         my $index = Controller::IndexController->new();
@@ -52,47 +52,56 @@ sub rout
         my $profile = Controller::ProfileController->new();
         $profile->profileController();
     }
-        
+
     if($query eq 'addNews')
     {
         my $addNews = Controller::AddNewsController->new();
         $addNews->addNewsController();
     }
-    
-    
-    if($in{keywords} eq 'changeProfile' or $in{changeProfile} eq '')
+
+
+    if( $in{changeProfile} eq '1')
     {
         my $changeProfile = Controller::ChangeProfileController->new();
-        $changeProfile->changeProfileController();
+        $changeProfile->changeProfileController('','','','',$in{userid});
     }
-    
-    
-    if($query eq 'changeNews')
+
+    if( $in{changeNews} eq '1')
     {
         my $changeNews = Controller::ChangeNewsController->new();
-        $changeNews->changeNewsController();
+        $changeNews->changeNewsController('','',$in{newsid});
     }
-    
+
 
     if($in{login} && $in{password})
     {
 
         my $login = Controller::LoginController->new();
         $login->loginController($in{login},$in{password});
-                
-                
+
+
         $in{login}  = '';
         $in{password} ='';
     }
-    
+
+    if($in{titleChange} && $in{textChange})
+    {
+                my $changeNews = Controller::ChangeNewsController->new();
+                $changeNews->changeNewsController($in{titleChange}, $in{textChange},$in{newsid});
+    }
 
 if($in{loginRegister} && $in{passwordRegister} && $in{emailRegister} && $in{firstNameRegister} && $in{lastNameRegister})
     {
         my $register = Controller::RegisterController->new();
-        $register->registerController($in{loginRegister}, $in{passwordRegister},$in{emailRegister},$in{firstNameRegister},$in{lastNameRegister});        
-           
-    }
+        $register->registerController($in{loginRegister}, $in{passwordRegister},$in{emailRegister},$in{firstNameRegister},$in{lastNameRegister});
 
+    }
+if($in{passwordChange} && $in{emailChange} && $in{firstNameChange} && $in{lastNameChange})
+    {
+            my $changeProfile = Controller::ChangeProfileController->new();
+            $changeProfile->changeProfileController($in{passwordChange}, $in{emailChange}, $in{firstNameChange}, $in{lastNameChange},$in{userid});
+
+    }
 
 }
 

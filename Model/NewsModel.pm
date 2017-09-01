@@ -44,7 +44,7 @@ sub _dbConnect
  sub updateNews
  {
 
-      my($self, $id, $title, $text,) = @_;
+      my($self, $title, $text,$id) = @_;
       my $date = localtime;
       my $dbh = $self->_dbConnect();
 
@@ -80,9 +80,8 @@ sub _dbConnect
   {
       my ($self,$userId) = @_;
       my %news = ();
-
       my $dbh = $self->_dbConnect();
-      my $sth =  $dbh->prepare('select * from news where user_id = ?');
+      my $sth =  $dbh->prepare('select * from news where id = ?');
       my $result = $sth->execute($userId);
       my $i =0;
       while (my $row = $sth->fetchrow_hashref)
@@ -92,6 +91,22 @@ sub _dbConnect
       }
       return \%news;
   }
+
+    sub selectNewsByUserId
+    {
+        my ($self,$userId) = @_;
+        my %news = ();
+        my $dbh = $self->_dbConnect();
+        my $sth =  $dbh->prepare('select * from news where user_id = ?');
+        my $result = $sth->execute($userId);
+        my $i =0;
+        while (my $row = $sth->fetchrow_hashref)
+        {
+            $news{$i} = $row;
+            $i++;
+        }
+        return \%news;
+    }
 
  sub deleteNews
   {

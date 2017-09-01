@@ -2,6 +2,10 @@ package Controller::ChangeNewsController;
 
 use strict;
 use warnings;
+use View::Main;
+use Model::NewsModel;
+use Libs::ChangeNews;
+use Data::Dumper;
 
 sub new
 {
@@ -12,8 +16,23 @@ sub new
 
 sub changeNewsController
 {
-    print "Content-type: text/html; charset=utf-8\n\n";
-	print 'change news';
+	my($self,$title,$text,$newsId) = @_;
+	if( $title eq '' || $text eq '')
+	{
+#	print Dumper($newsId);
+        my $user = Model::NewsModel->new();
+        my $newsInfo = $user->selectNewsById($newsId);
+
+        my $changeInfo = Libs::ChangeNews->new();
+        my $changePage = $changeInfo->ChangeInfo($newsInfo->{0}->{title},$newsInfo->{0}->{text},$newsId);
+
+        my $main = View::Main->new();
+        $main->printMain($changePage);
+	}else{
+
+	            my $user = Model::NewsModel->new();
+                my $newsInfo = $user->updateNews($title,$text,$newsId);
+	}
 }
 
 

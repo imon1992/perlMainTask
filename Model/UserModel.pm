@@ -33,17 +33,18 @@ sub createUser
 }
 
 sub updateUser
-{
-    my ($self,$login,$pass,$email,$fName,$lName,$id) = @_;
-    my $dbh = $self->_dbConnect();
-    my $sth = $dbh->prepare("update users set login = $login, password = $pass=md5($pass),
-                            email = $email, first_name = $fName, last_name = $lName  where id = $id");
-    if ($sth->execute())
-    {
-        $sth->finish();
-        return "User update";
-    }
-}
+  {
+      my ($self,$pass,$email,$fName,$lName,$id) = @_;
+      my $dbh = $self->_dbConnect();
+
+     my $sth = $dbh->prepare("update users set password = ?,
+        email = ?, first_name = ?, last_name = ?  where id = ?");
+    if ($sth->execute(md5($pass),$email,$fName,$lName,$id))
+      {
+          $sth->finish();
+          return "User update";
+     }
+ }
 
 sub selectUser
 {
