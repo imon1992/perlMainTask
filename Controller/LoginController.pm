@@ -9,7 +9,6 @@ use Model::UserModel;
  use Model::NewsModel;
  use Libs::FileReader;
  use Libs::MakeHash;
- use Libs::sessionUtil;
 
  use Libs::PlaceholderReplace;
  use Data::Dumper;
@@ -28,12 +27,12 @@ sub loginController
     my $p = $x->selectUser($login,$pass);
 if($p)
 {
-    my $x = Libs::sessionUtil->new();
-    $x->sessionStarter();
-    $x->set('userId','10');
-    my $v = $x->get('userId');
+#    my $x = Libs::sessionUtil->new();
+#    $x->sessionStarter();
+#    $x->set('userId','10');
+#    my $v = $x->get('userId');
 
-    print Dumper($v);
+#    print Dumper($v);
        my $url="script.cgi?profile";
    my $t=0; # time until redirect activates
    print "<META HTTP-EQUIV=refresh CONTENT=\"$t;URL=$url\">\n";

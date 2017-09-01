@@ -1,4 +1,4 @@
-package Libs::sessionUtil;
+package Libs::SessionUtil;
 
 use strict;
 use warnings;

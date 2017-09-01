@@ -45,12 +45,12 @@ sub _dbConnect
  {
 
       my($self, $title, $text,$id) = @_;
-      my $date = localtime;
+      #my $date = localtime;
       my $dbh = $self->_dbConnect();
 
-     my $sth = $dbh->prepare("update news set title = ?, text = ?, date = ?,
+     my $sth = $dbh->prepare("update news set title = ?, text = ?
                 where id = ?");
-    if ($sth->execute($title,$text,$date,$id))
+    if ($sth->execute($title,$text,$id))
       {
           $sth->finish();
           return "News update";

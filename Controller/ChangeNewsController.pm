@@ -29,7 +29,6 @@ sub changeNewsController
         my $main = View::Main->new();
         $main->printMain($changePage);
 	}else{
-
 	            my $user = Model::NewsModel->new();
                 my $newsInfo = $user->updateNews($title,$text,$newsId);
 	}
