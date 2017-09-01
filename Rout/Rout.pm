@@ -60,7 +60,7 @@ sub rout
     }
     
     
-    if($query eq 'changeProfile')
+    if($in{keywords} eq 'changeProfile' or $in{changeProfile} eq '')
     {
         my $changeProfile = Controller::ChangeProfileController->new();
         $changeProfile->changeProfileController();

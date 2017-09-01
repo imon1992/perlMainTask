@@ -4,9 +4,12 @@ use strict;
 use warnings;
 
   use View::RenderNews;
+ use View::RenderProfile;
   use View::Main;
   use Model::NewsModel;
+  use Model::UserModel;
  use Libs::FileReader;
+ use Libs::sessionUtil;
   use Libs::MakeHash;
   use Libs::PlaceholderReplace;
   use Data::Dumper;
@@ -20,29 +23,40 @@ sub new
 
 sub profileController
 {
+my $x = Libs::sessionUtil->new();
+#    $x->sessionStarter();
+#    my $v = $x->get('userId');
+
+#    print Dumper($v);
 
      my $x = Model::NewsModel->new();
-     my $res = $x->selectNews();
+     my $allNews = $x->selectNews();
+    my $userNews = $x->selectNewsById(1);
 
-    # print Dumper($res->{1});
+    my $user = Model::UserModel->new();
+    my $userInfo = $user->selectAllUserInfo(1);
+#print "Content-type: text/html; charset=utf-8\n\n";
+#print Dumper($userNews);
+#print Dumper($userInfo);
+    # print Dumper($allNews->{1});
      my $index = View::RenderNews->new();
-     my $allNews = $index->renderNews($res);
+     my $allNews = $index->renderNews($allNews);
+
+    my $profile = View::RenderProfile->new();
+    my $profileResult = $profile->renderUserInfo($userInfo,$userNews);
 
     my $fileReader = Libs::FileReader->new();
     my $register = $fileReader->readFile('html/logout.html');
    my $replaceFile = $fileReader->readFile('html/main.html');
 
     my $hashMake = Libs::MakeHash->new();
-   my $hash = $hashMake->makeHash($register,$allNews,'portfolio');
+   my $hash = $hashMake->makeHash($register,$allNews,$profileResult);
 
   my $placeholderReplace = Libs::PlaceholderReplace->new();
  my $html = $placeholderReplace->replacer($replaceFile,$hash);
 
  my $view = View::Main->new();
       $view->printMain($html);
-
-#    print "Content-type: text/html; charset=utf-8\n\n";
-#	print 'profile';
 }
 
 

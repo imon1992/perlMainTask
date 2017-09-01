@@ -12,7 +12,7 @@ sub new
 
 sub makeHash
 {
-    my($self,$registe,$news,$profile) = @_;
+    my($self,$registe,$news,$profile,) = @_;
     my %c = (LANG_register=>$registe,LANG_allNews=>$news,LANG_portfolio=>$profile);
     return \%c;
 }

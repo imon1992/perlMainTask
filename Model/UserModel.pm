@@ -58,6 +58,23 @@ sub selectUser
 
 }
 
+sub selectAllUserInfo
+{
+
+      my ($self,$userId) = @_;
+      my %userInfo = ();
+
+    my $dbh = $self->_dbConnect();
+    my $sth = $dbh->prepare("select * from users WHERE id = ?");
+      my $result = $sth->execute($userId);
+      my $i =0;
+      while (my $row = $sth->fetchrow_hashref)
+      {
+          $userInfo{$i} = $row;
+          $i++;
+      }
+      return \%userInfo;
+}
 
 
 1;

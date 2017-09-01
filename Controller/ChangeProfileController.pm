@@ -12,8 +12,8 @@ sub new
 
 sub changeProfileController
 {
-    print "Content-type: text/html; charset=utf-8\n\n";
-	print 'change profile';
+#    print "Content-type: text/html; charset=utf-8\n\n";
+#	print 'change profile';
 }
 
 

@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!C:\Dwimperl\perl\bin\perl.exe -w
 
 use strict;
 use warnings;
@@ -12,7 +12,7 @@ use lib('Utils');
 use lib('Rout');
 use lib('View');
 use lib('Libs');
-# use lib('Controller');
+ use lib('Controller');
 
 
 
@@ -29,7 +29,7 @@ use Rout::Rout;
 my $rout = Rout::Rout->new();
 $rout->rout();
 
- print '<pre>' . Dumper(\%in).'<pre>';
+# print '<pre>' . Dumper(\%in).'<pre>';
 # print '<pre>' . Dumper($in{login}).'<pre>';
 
  # print '<pre>' . Dumper(\%ENV).'<pre>';
