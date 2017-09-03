@@ -1,17 +1,20 @@
 package Libs::ChangeInfo;
 
+#user14
 use strict;
 use warnings;
-use Data::Dumper;
+
+sub ChangeInfo;
+
 sub new
 {
-    my $class = ref($_[0])||$_[0];
-    my $self ||={};
-    return bless $self,$class;
+    my $class = ref($_[0]) || $_[0];
+    my $self ||= {};
+    return bless $self, $class;
 }
 
-sub ChangeInfo{
-   my($self,$pass,$email,$fName,$lName,$id) = @_;
+sub ChangeInfo {
+    my ($self, $pass, $email, $fName, $lName, $id) = @_;
     my $html = '<!DOCTYPE HTML>
                 <html>
                 <head>
@@ -37,7 +40,7 @@ sub ChangeInfo{
 
               </body>
               </html>';
-     return $html;
+    return $html;
 }
 
 

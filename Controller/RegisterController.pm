@@ -33,9 +33,8 @@ sub registerController
 
     unless ($login eq '' && $pass eq '' && $email eq '' && $fName eq '' && $lName eq '') {
 
-
-            my $x = Model::UserModel->new();
-            $x->createUser($login, $pass, $email, $fName, $lName);
+        my $x = Model::UserModel->new();
+        $x->createUser($login, $pass, $email, $fName, $lName);
 
     }
 }

@@ -1,21 +1,23 @@
- package Libs::AddNews;
+package Libs::AddNews;
 
- use strict;
- use warnings;
- use Data::Dumper;
- 
+#user14
+use strict;
+use warnings;
+
+sub addNews;
+
 sub new
- {
-     my $class = ref($_[0])||$_[0];
-     my $self ||={};
-     return bless $self,$class;
- }
+{
+    my $class = ref($_[0]) || $_[0];
+    my $self ||= {};
+    return bless $self, $class;
+}
 
 sub addNews
 {
-    my($self,$userId) = @_;
+    my ($self, $userId) = @_;
 
-    my $html ='  <!DOCTYPE HTML>
+    my $html = '  <!DOCTYPE HTML>
   <html>
   <head>
      <meta charset="utf-8">
@@ -28,7 +30,7 @@ sub addNews
       <form method="post" action="script.cgi?profile">
           title <input class="block" name="titleAdd">
           News text <textarea class="block" name="newsTextAdd" rows="10" cols="45"> </textarea>
-<input type="hidden" class="block" name="userid" value="'.$userId.'"> 
+            <input type="hidden" class="block" name="userid" value="'.$userId.'">
           <button type="submit">add</button>
       </form>
   </div>

@@ -1,5 +1,6 @@
 package Controller::IndexController;
 
+#user14
 use strict;
 use warnings;
 
@@ -9,7 +10,9 @@ use Model::NewsModel;
 use Libs::FileReader;
 use Libs::MakeHash;
 use Libs::PlaceholderReplace;
-use Data::Dumper;
+
+sub indexController;
+
 sub new
 {
     my $class = ref($_[0]) || $_[0];

@@ -1,8 +1,11 @@
 package Libs::MakeHash;
 
+#user14
 use strict;
 use warnings;
-use Data::Dumper;
+
+sub renderUserInfo;
+
 sub new
 {
     my $class = ref($_[0])||$_[0];

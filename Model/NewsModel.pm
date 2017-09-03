@@ -2,10 +2,11 @@ package Model::NewsModel;
 
 use strict;
 use warnings;
-use Time::localtime;
-
 
 use DBI;
+use POSIX;
+
+
 sub createNewsl;
 sub updateNews;
 sub selectNews;
@@ -29,7 +30,7 @@ sub _dbConnect
  sub createNews
  {
      my($self, $title, $text, $user_id) = @_;
-      my $date = localtime;
+      my $date = POSIX::strftime('%y.%m.%d.%H.%M.%S', localtime);
       my $dbh = $self->_dbConnect();
       my $sth = $dbh->prepare("insert into news (title, text, date, user_id)
                                 values (?,?,?,?)");

@@ -1,12 +1,14 @@
 package Controller::ChangeNewsController;
 
+#user 14
 use strict;
 use warnings;
 
 use View::Main;
 use Model::NewsModel;
 use Libs::ChangeNews;
-use Data::Dumper;
+
+sub changeNewsController;
 
 sub new
 {

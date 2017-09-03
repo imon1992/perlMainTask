@@ -6,6 +6,8 @@ use warnings;
 use View::Main;
 use Libs::ChangeInfo;
 
+sub changeProfileController;
+
 sub new
 {
     my $class = ref($_[0]) || $_[0];

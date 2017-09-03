@@ -1,8 +1,9 @@
 package View::Main;
 
+#user14
 use strict;
 use warnings;
-use Data::Dumper;
+
 sub new
 {
     my $class = ref($_[0])||$_[0];
@@ -12,7 +13,6 @@ sub new
 
 sub printMain{
    my($self,$html) = @_;
-#   print "Content-type: text/html; charset=utf-8\n\n";
 
    print $html;
 }
