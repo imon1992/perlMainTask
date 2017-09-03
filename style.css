@@ -13,7 +13,7 @@
 text-align: center;
 }
 
-.author
+.author,.changeNews
 {
 text-align: right;	
 }
@@ -27,6 +27,8 @@ text-align: right;
 
 .right
 {
+    margin-left: 50px;
 	display: inline-block;
-    /*float: right;*/
+    float: right;
+    width: 45%;
 }

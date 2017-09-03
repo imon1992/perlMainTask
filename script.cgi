@@ -1,11 +1,11 @@
-#!/usr/bin/perl -w
+#!C:\Dwimperl\perl\bin\perl.exe -w
 
 use strict;
 use warnings;
 use Data::Dumper;
 use CGI qw(:cgi-lib :escapeHTML :unescapeHTML);
 use CGI::Carp qw(fatalsToBrowser);
- # print "Content-type: text/html; charset=utf-8\n\n";
+ print "Content-type: text/html; charset=utf-8\n\n";
 
 
 use lib('Utils');
@@ -18,12 +18,12 @@ use lib('Libs');
 
 use Rout::Rout;
 #use Libs::Validators;
-# use vars qw(%in);
+ use vars qw(%in);
 
 
 
-# $|=1;
-# ReadParse();
+ $|=1;
+ ReadParse();
 
 
 my $rout = Rout::Rout->new();

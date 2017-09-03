@@ -22,7 +22,7 @@ sub ChangeInfo{
                 <html>
                 <body>
                 <div class="block">';
-    $html .= '    <form method="post" action="script.cgi?profile">
+    $html .= '    <form method="post" action="script.cgi?profile=1&userid='.$id.'">
                         new password <input class="block" name="passwordChange" value="'.$pass.'">
                         email <input class="block" name="emailChange" value="'.$email.'">
                         First Name <input class="block" name="firstNameChange" value="'.$fName.'">

@@ -19,13 +19,13 @@ sub addNews
   <html>
   <head>
      <meta charset="utf-8">
-      <title>С�~Bили</title>
+      <title>С�~Bили</title>
       <link rel="stylesheet" href="style.css">
   </head>
   <html>
   <body>
   <div class="block">
-      <form method="post" action="script.cgi">
+      <form method="post" action="script.cgi?profile">
           title <input class="block" name="titleAdd">
           News text <textarea class="block" name="newsTextAdd" rows="10" cols="45"> </textarea>
 <input type="hidden" class="block" name="userid" value="'.$userId.'"> 
