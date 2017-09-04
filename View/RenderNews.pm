@@ -19,7 +19,7 @@ sub renderNews {
     my $html = '';
 
     # ';
-    foreach my $key(keys $allNews)
+    foreach my $key(reverse sort {$allNews->{$a}->{date} cmp $allNews->{$b}->{date}}keys $allNews)
     {
 
         $html .= '<div class="news">

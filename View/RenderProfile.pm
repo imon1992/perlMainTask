@@ -30,7 +30,7 @@ sub renderUserInfo {
                 </div>';
     }
 
-    foreach my $key(keys $userNews)
+    foreach my $key(reverse sort {$userNews->{$a}->{date} cmp $userNews->{$b}->{date}} keys $userNews)
     {
 
         $profileInfo .= ' <div class="news">

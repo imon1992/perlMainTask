@@ -66,7 +66,7 @@ sub _dbConnect
 
      my $dbh = $self->_dbConnect();
      my $sth =  $dbh->prepare('select users.login, news.* from news
- join users on news.user_id = users.id');
+ join users on news.user_id = users.id order by date');
      my $result = $sth->execute();
      my $i =0;
      while (my $row = $sth->fetchrow_hashref)

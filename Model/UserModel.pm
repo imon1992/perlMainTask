@@ -37,10 +37,19 @@ sub updateUser
 {
     my ($self, $pass, $email, $fName, $lName, $id) = @_;
     my $dbh = $self->_dbConnect();
-
-    my $sth = $dbh->prepare("update users set password = ?,
+    my $res;
+    my $sth;
+    if ($pass== undef) {
+        $sth = $dbh->prepare("update users set
         email = ?, first_name = ?, last_name = ?  where id = ?");
-    if ($sth->execute(md5($pass), $email, $fName, $lName, $id))
+        $res = $sth->execute( $email, $fName, $lName, $id);
+    }else{
+        $sth = $dbh->prepare("update users set password = ?,
+        email = ?, first_name = ?, last_name = ?  where id = ?");
+        $res = $sth->execute(md5($pass), $email, $fName, $lName, $id);
+    }
+
+    if ($res)
     {
         $sth->finish();
         return "User update";

@@ -18,8 +18,6 @@ use Controller::LogoutController;
 
 use vars qw(%in);
 
-sub rout;
-
 sub new
 {
     my $class = ref($_[0]) || $_[0];
@@ -34,7 +32,7 @@ sub rout
     $| = 1;
     ReadParse();
 
-    if ($in{passwordChange} && $in{emailChange} && $in{firstNameChange} && $in{lastNameChange})
+    if ($in{emailChange} && $in{firstNameChange} && $in{lastNameChange})
     {
         my $changeProfile = Controller::ChangeProfileController->new();
         $changeProfile->changeProfileController($in{passwordChange}, $in{emailChange}, $in{firstNameChange}, $in{lastNameChange}, $in{userid});
@@ -57,7 +55,6 @@ sub rout
 
     if ($in{titleChange} && $in{textChange})
     {
-        #                print Dumper($in{userid});
         my $changeNews = Controller::ChangeNewsController->new();
         $changeNews->changeNewsController($in{titleChange}, $in{textChange}, $in{newsid}, $in{userid});
     }
@@ -89,7 +86,6 @@ sub rout
     }
 
     if ($in{profile} eq '1' || $query eq 'profile')
-    #    if($query eq 'profile')
     {
         my $profile = Controller::ProfileController->new();
         $profile->profileController($in{userid});
