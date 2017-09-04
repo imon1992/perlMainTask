@@ -4,6 +4,8 @@ package Libs::PlaceholderReplace;
 use strict;
 use warnings;
 
+sub replacer;
+
 sub new
 {
     my $class = ref($_[0]) || $_[0];

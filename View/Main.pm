@@ -4,6 +4,7 @@ package View::Main;
 use strict;
 use warnings;
 
+sub printMain;
 sub new
 {
     my $class = ref($_[0])||$_[0];

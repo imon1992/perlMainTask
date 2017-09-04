@@ -18,6 +18,8 @@ use Controller::LogoutController;
 
 use vars qw(%in);
 
+sub rout;
+
 sub new
 {
     my $class = ref($_[0]) || $_[0];

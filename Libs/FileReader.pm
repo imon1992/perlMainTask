@@ -4,6 +4,8 @@ package Libs::FileReader;
 use strict;
 use warnings;
 
+sub readFile;
+
 sub new
 {
     my $class = ref($_[0])||$_[0];

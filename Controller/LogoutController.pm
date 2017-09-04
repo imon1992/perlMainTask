@@ -4,6 +4,7 @@ package Controller::LogoutController;
 use strict;
 use warnings;
 
+sub logoutController;
 
 sub new
 {

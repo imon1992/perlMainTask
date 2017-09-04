@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17ec2617-c4fd-471e-86df-8092e879951d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/ChangeNewsController.pm" afterPath="$PROJECT_DIR$/Controller/ChangeNewsController.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/ChangeProfileController.pm" afterPath="$PROJECT_DIR$/Controller/ChangeProfileController.pm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/FileReader.pm" afterPath="$PROJECT_DIR$/Libs/FileReader.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/NewsModel.pm" afterPath="$PROJECT_DIR$/Model/NewsModel.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/ProfileController.pm" afterPath="$PROJECT_DIR$/Controller/ProfileController.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/RenderNews.pm" afterPath="$PROJECT_DIR$/View/RenderNews.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/RenderProfile.pm" afterPath="$PROJECT_DIR$/View/RenderProfile.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/LogoutController.pm" afterPath="$PROJECT_DIR$/Controller/LogoutController.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/Main.pm" afterPath="$PROJECT_DIR$/View/Main.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/MakeHash.pm" afterPath="$PROJECT_DIR$/Libs/MakeHash.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/PlaceholderReplace.pm" afterPath="$PROJECT_DIR$/Libs/PlaceholderReplace.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Libs/ProfileMaker.pm" afterPath="$PROJECT_DIR$/Libs/ProfileMaker.pm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/RegisterController.pm" afterPath="$PROJECT_DIR$/Controller/RegisterController.pm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rout/Rout.pm" afterPath="$PROJECT_DIR$/Rout/Rout.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/UserModel.pm" afterPath="$PROJECT_DIR$/Model/UserModel.pm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script.cgi" afterPath="$PROJECT_DIR$/script.cgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="perlMain.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,106 +34,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Rout.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rout/Rout.pm">
+      <file leaf-file-name="ChangeInfo.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Libs/ChangeInfo.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1463" max-vertical-offset="2057">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="884">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddNews.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Libs/AddNews.pm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="850">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/RegisterController.pm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding>
-                <element signature="e#57#78#0" expanded="true" />
+                <element signature="e#76#97#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserModel.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/UserModel.pm">
+      <file leaf-file-name="ProfileController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/ProfileController.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-              <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="765">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <element signature="e#75#96#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogoutController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/LogoutController.pm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsModel.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/NewsModel.pm">
+      <file leaf-file-name="LoginController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/LoginController.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
-              <caret line="68" column="52" selection-start-line="67" selection-start-column="31" selection-end-line="68" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="714">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Validators.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/Validators.pm">
+      <file leaf-file-name="IndexController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/IndexController.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileMaker.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/ProfileMaker.pm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="e#64#85#0" expanded="true" />
+                <element signature="e#73#94#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaceholderReplace.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/PlaceholderReplace.pm">
+      <file leaf-file-name="ChangeProfileController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/ChangeProfileController.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="969">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+              <folding>
+                <element signature="e#73#88#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakeHash.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/MakeHash.pm">
+      <file leaf-file-name="ChangeNewsController.pm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/ChangeNewsController.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="952">
+              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+              <folding>
+                <element signature="e#79#94#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileReader.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Libs/FileReader.pm">
+      <file leaf-file-name="AddNewsController.pm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Controller/AddNewsController.pm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RenderProfile.pm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/RenderProfile.pm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-              <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RenderNews.pm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/RenderNews.pm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5881384" vertical-offset="0" max-vertical-offset="748">
-              <caret line="21" column="84" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="84" />
-              <folding />
+            <state vertical-scroll-proportion="0.16803955" vertical-offset="0" max-vertical-offset="748">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#75#90#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,30 +159,30 @@
         <option value="$PROJECT_DIR$/View/ChangeInfo.pm" />
         <option value="$PROJECT_DIR$/html/changeInfo.html" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/Controller/RegisterController.pm" />
         <option value="$PROJECT_DIR$/Libs/Validators.pm" />
         <option value="$PROJECT_DIR$/Controller/AddNewsController.pm" />
         <option value="$PROJECT_DIR$/Controller/LoginController.pm" />
-        <option value="$PROJECT_DIR$/Controller/LogoutController.pm" />
         <option value="$PROJECT_DIR$/Libs/AddNews.pm" />
         <option value="$PROJECT_DIR$/Libs/ChangeInfo.pm" />
         <option value="$PROJECT_DIR$/Libs/ChangeNews.pm" />
-        <option value="$PROJECT_DIR$/Libs/MakeHash.pm" />
-        <option value="$PROJECT_DIR$/Libs/PlaceholderReplace.pm" />
-        <option value="$PROJECT_DIR$/View/Main.pm" />
-        <option value="$PROJECT_DIR$/Libs/FileReader.pm" />
         <option value="$PROJECT_DIR$/Model/NewsModel.pm" />
         <option value="$PROJECT_DIR$/View/RenderNews.pm" />
         <option value="$PROJECT_DIR$/View/RenderProfile.pm" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/Libs/ProfileMaker.pm" />
         <option value="$PROJECT_DIR$/Controller/ChangeNewsController.pm" />
-        <option value="$PROJECT_DIR$/Rout/Rout.pm" />
         <option value="$PROJECT_DIR$/Controller/ChangeProfileController.pm" />
         <option value="$PROJECT_DIR$/Model/UserModel.pm" />
         <option value="$PROJECT_DIR$/Controller/IndexController.pm" />
         <option value="$PROJECT_DIR$/Controller/ProfileController.pm" />
         <option value="$PROJECT_DIR$/script.cgi" />
+        <option value="$PROJECT_DIR$/View/Main.pm" />
+        <option value="$PROJECT_DIR$/Rout/Rout.pm" />
+        <option value="$PROJECT_DIR$/Libs/ProfileMaker.pm" />
+        <option value="$PROJECT_DIR$/Libs/PlaceholderReplace.pm" />
+        <option value="$PROJECT_DIR$/Libs/MakeHash.pm" />
+        <option value="$PROJECT_DIR$/Libs/FileReader.pm" />
+        <option value="$PROJECT_DIR$/Controller/RegisterController.pm" />
+        <option value="$PROJECT_DIR$/Controller/LogoutController.pm" />
       </list>
     </option>
   </component>
@@ -634,106 +639,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/AddNews.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/ChangeInfo.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/ChangeNews.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42009884" vertical-offset="0" max-vertical-offset="607">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/RegisterController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72817135" vertical-offset="0" max-vertical-offset="782">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/LoginController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028006589" vertical-offset="17" max-vertical-offset="714">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/ChangeProfileController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94398683" vertical-offset="73" max-vertical-offset="969">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-          <folding>
-            <element signature="e#73#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/ProfileController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6079078" vertical-offset="158" max-vertical-offset="765">
-          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
-          <folding>
-            <element signature="e#75#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/LogoutController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056013178" vertical-offset="0" max-vertical-offset="607">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/AddNewsController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16803955" vertical-offset="0" max-vertical-offset="748">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#75#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/ChangeNewsController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0345963" vertical-offset="69" max-vertical-offset="952">
-          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-          <folding>
-            <element signature="e#79#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/IndexController.pm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3360791" vertical-offset="0" max-vertical-offset="952">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#73#94#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -757,16 +667,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Main.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.16803955" vertical-offset="0" max-vertical-offset="607">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/RenderNews.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rout/Rout.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1463" max-vertical-offset="2057">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="142" max-vertical-offset="2091">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="e#57#78#0" expanded="true" />
           </folding>
@@ -775,7 +693,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/UserModel.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+        <state vertical-scroll-proportion="1.1202636" vertical-offset="0" max-vertical-offset="1700">
           <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
           <folding />
         </state>
@@ -783,8 +701,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/NewsModel.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
+        <state vertical-scroll-proportion="1.8764415" vertical-offset="0" max-vertical-offset="2227">
           <caret line="68" column="52" selection-start-line="67" selection-start-column="31" selection-end-line="68" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/RenderProfile.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -800,7 +726,7 @@
     <entry file="file://$PROJECT_DIR$/Libs/ProfileMaker.pm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
             <element signature="e#64#85#0" expanded="true" />
           </folding>
@@ -809,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Libs/PlaceholderReplace.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -818,32 +744,116 @@
     <entry file="file://$PROJECT_DIR$/Libs/MakeHash.pm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Libs/FileReader.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/RenderProfile.pm">
+    <entry file="file://$PROJECT_DIR$/Libs/ChangeNews.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="409" max-vertical-offset="1003">
-          <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/RenderNews.pm">
+    <entry file="file://$PROJECT_DIR$/Libs/ChangeInfo.pm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5881384" vertical-offset="0" max-vertical-offset="748">
-          <caret line="21" column="84" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="884">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/AddNews.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="850">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/RegisterController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#76#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/ProfileController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="765">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#75#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/LogoutController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/LoginController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="714">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/IndexController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#73#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/ChangeProfileController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="969">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#73#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/ChangeNewsController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="952">
+          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+          <folding>
+            <element signature="e#79#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/AddNewsController.pm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16803955" vertical-offset="0" max-vertical-offset="748">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#75#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,7 +12,7 @@ use Libs::MakeHash;
 use Libs::PlaceholderReplace;
 
 
-sub changeNewsController;
+sub profileMaker;
 
 sub new
 {

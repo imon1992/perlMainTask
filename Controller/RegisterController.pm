@@ -9,6 +9,8 @@ use Libs::Validators;
 use View::Main;
 use Model::UserModel;
 
+sub registerController;
+
 sub new
 {
     my $class = ref($_[0]) || $_[0];

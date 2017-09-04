@@ -4,7 +4,7 @@ package Libs::MakeHash;
 use strict;
 use warnings;
 
-sub renderUserInfo;
+sub makeHash;
 
 sub new
 {
