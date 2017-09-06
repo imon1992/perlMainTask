@@ -1,5 +1,6 @@
 package Model::NewsModel;
 
+#user12
 use strict;
 use warnings;
 

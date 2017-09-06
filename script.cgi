@@ -1,5 +1,6 @@
-#!C:\Dwimperl\perl\bin\perl.exe -w
+#!/usr/bin/perl -w
 
+#user14
 use strict;
 use warnings;
 
